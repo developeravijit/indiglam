@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, speed);
   }
 
-  const speed = 70;
+  const speed = 50;
   const elements = document.querySelectorAll(".animation-para");
 
   elements.forEach((el) => {
