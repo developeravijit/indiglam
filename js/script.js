@@ -1,3 +1,19 @@
+// Page Loader
+window.onload = function () {
+  setTimeout(() => {
+    const loader = document.getElementById("onload-loader");
+    const content = document.getElementById("onload-content");
+
+    loader.classList.add("fade-out");
+
+    setTimeout(() => {
+      loader.classList.add("onload-hidden");
+      content.classList.remove("onload-hidden");
+      initCounterObserver();
+    }, 500);
+  }, 2000);
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   // Animated Text Dynamic
   function typeEffect(element, speed) {
@@ -243,4 +259,62 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.classList.toggle("active");
     });
   });
+
+  // Counting Numbers
+  const counters = document.querySelectorAll(".count");
+  const totalDuration = 2000; // total time for animation (2s)
+  const easeOutQuad = (t) => t * (2 - t);
+
+  // Counter animation function
+  function startCounters() {
+    counters.forEach((counter) => {
+      counter.innerText = "0 +"; // reset before starting
+      const target = Number(counter.getAttribute("data-target")) || 0;
+      let startTime = null;
+
+      const updateCount = (timestamp) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / totalDuration, 1);
+        const easedProgress = easeOutQuad(progress);
+        const current = Math.floor(target * easedProgress);
+
+        if (progress < 1) {
+          counter.innerText = current.toLocaleString() + " +";
+          requestAnimationFrame(updateCount);
+        } else {
+          counter.innerText = formatNumber(target) + " +";
+        }
+      };
+
+      requestAnimationFrame(updateCount);
+    });
+  }
+
+  // Number formatter (K / L)
+  function formatNumber(num) {
+    if (num >= 100000) return Math.floor(num / 100000) + "L";
+    if (num >= 1000) return Math.floor(num / 1000) + "K";
+    return num.toString();
+  }
+
+  // Intersection Observer to trigger animation once
+  const section = document.querySelector(".counting-numbers");
+  let hasAnimated = false;
+
+  if (section) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            startCounters();
+            hasAnimated = true; // run only once
+            observer.unobserve(section); // stop observing
+          }
+        });
+      },
+      { threshold: 0.5 } // 50% visible before triggering
+    );
+
+    observer.observe(section);
+  }
 });
