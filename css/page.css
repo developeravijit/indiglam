@@ -127,7 +127,7 @@ body {
     padding-block: 30px;
     position: relative;
     overflow: hidden;
-    transform: rotate(1deg) translateY(20px);
+
     cursor: pointer;
     background: var(--border-color);
     cursor: grabbing;
