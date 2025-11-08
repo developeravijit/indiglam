@@ -1,0 +1,27 @@
+:root {
+    --playfair-font: "Playfair Display", serif;
+    --playball-font: "Playball", cursive;
+    --agaleoz-font: "Agaleoz", sans-serif;
+    --larken-font: "Larken DEMO", serif;
+    --belina-font: 'Bellina', serif;
+    --hdrTop-bg: #c8a77f;
+    --active-txt-color: #f2dec5;
+    --primary-color: #ffffff;
+    --secondary-color: #FAEAD7;
+    --tertiary-color: #F1DABF;
+    --card-txt-color: #D9CEC1;
+    --border-color: #E5D1B9;
+    --duration: 3s;
+    --shine-angle: 90deg;
+    --shine-color: rgba(255, 255, 255, 0.4);
+    --shine-background: linear-gradient(var(--shine-angle),
+            rgba(255, 255, 255, 0) 0%,
+            var(--shine-color) 50%,
+            rgba(255, 255, 255, 0) 100%);
+
+    --page-prinary-color: #F4E3CE;
+
+    --animation-duration: 18s;
+    --services-totalItems: 3;
+    --page-secondary-color: #FDDFBC;
+}

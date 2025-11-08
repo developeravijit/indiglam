@@ -11,7 +11,7 @@ window.onload = function () {
       content.classList.remove("onload-hidden");
       initCounterObserver();
     }, 500);
-  }, 2000);
+  }, 1000);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
