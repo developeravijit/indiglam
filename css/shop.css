@@ -482,8 +482,11 @@ body {
 }
 
 @media screen and (max-width:576px) {
-    /* Shopping Section */
 
+    /* Shopping Section */
+    .autoScroll-box {
+        padding-block: 37px;
+    }
 
     .scrollImg {
         width: 70px;
@@ -501,6 +504,19 @@ body {
 
     .gridCard-box {
         margin: 0 auto;
+    }
+
+    .pageNumber-btn {
+        padding: 10px 15px;
+    }
+
+    .rightTop-cntn {
+        flex-direction: column;
+    }
+
+    .filter-bar {
+        justify-content: end;
+        margin-top: 20px;
     }
 
 }
