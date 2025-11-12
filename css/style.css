@@ -384,6 +384,29 @@ textarea {
     background: var(--active-txt-color);
 }
 
+.nav-link::after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--active-txt-color);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-link.active::after {
+    width: 0;
+}
+
 /* Right Nav Bar */
 .rightNav-list {
     justify-content: end;
@@ -445,6 +468,10 @@ textarea {
     padding: 0;
     margin: 0;
     line-height: normal;
+}
+
+.rightNav-link.active {
+    color: var(--border-color);
 }
 
 /* Banner Section */
@@ -1971,6 +1998,11 @@ textarea {
 }
 
 @media screen and (max-width:768px) {
+
+    #luxy {
+        transform: none !important;
+        will-change: auto !important;
+    }
 
     /* Banner Section */
     .title-1 {
