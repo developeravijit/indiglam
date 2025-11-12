@@ -1210,6 +1210,11 @@ textarea {
     margin-top: 100px;
 }
 
+.swiper2-img {
+    max-width: 400px;
+    border: 1px solid rgba(229, 209, 185, 0.5);
+}
+
 .swiper2-cntn {
     max-width: 400px;
     margin: 0 auto;
@@ -1986,6 +1991,14 @@ textarea {
         margin-right: 0;
     }
 
+    /* Collection Section */
+    .swiper2,
+    .swiper3,
+    .swiper4 {
+        margin-top: 30px;
+    }
+
+
     /* Asthetic Section */
     .asthetic-img {
         max-width: 456px;
@@ -2067,12 +2080,6 @@ textarea {
         padding: 20px 10px;
     }
 
-    /* Collection Section */
-    .swiper2,
-    .swiper3,
-    .swiper4 {
-        margin-top: 50px;
-    }
 
 
     /* Asthetic Section */

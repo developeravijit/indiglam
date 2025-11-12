@@ -295,9 +295,136 @@ body {
 }
 
 
+.description-sec {
+    padding: 37px 0;
+    border: 1px solid var(--border-color);
+}
+
+
+.product-details {
+    padding: 30px;
+}
+
+.tab-header {
+    position: relative;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.tab-link {
+    background: transparent;
+    color: var(--border-color);
+    font-size: clamp(1.4rem, 3vw + 0.8rem, 2.3rem);
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s ease;
+    margin-right: 70px;
+    text-transform: capitalize;
+}
+
+.tab-link:last-child {
+    margin: 0;
+}
+
+.tab-link:hover {
+    color: #fff;
+}
+
+.tab-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #d9c7a1;
+    transition:
+        width 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.tab-pane {
+    display: none;
+    color: rgba(255, 235, 211, 0.7);
+    font-family: var(--larken-font);
+    font-weight: 300;
+    font-size: clamp(1.4rem, 3vw + 0.8rem, 2.3rem);
+}
+
+#description>p:first-child {
+    margin-bottom: 30px;
+}
+
+#additional>p {
+    margin-bottom: 20px;
+}
+
+#additional>p:last-child {
+    margin: 0;
+}
+
+
+.tab-pane.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Related Product Section */
+
+.related-sec {
+    padding: 75px 0;
+    border: 1px solid var(--border-color);
+    margin: 50px 0;
+}
+
+.swiper2-title>p {
+    text-align: start;
+    font-family: var(--larken-font);
+    font-weight: 500;
+}
+
+.swiper2-title>p:last-child {
+    font-weight: normal;
+    font-size: clamp(1.2rem, 2vw + 0.6rem, 1.92rem);
+}
+
+@media screen and (max-width:768px) {
+
+    /* Product Details Section */
+    .details-sec {
+        margin: 30px 0;
+    }
+
+
+    /* Product Description Section */
+    .description-sec {
+        padding: 0;
+    }
+
+    .product-details {
+        padding: 30px 10px;
+    }
+
+    .tab-link {
+        margin-right: 40px;
+    }
 
 
 
+}
 
 
 
