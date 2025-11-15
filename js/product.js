@@ -1,42 +1,4 @@
 window.addEventListener("DOMContentLoaded", () => {
-  // Product Magnifying
-  const container = document.querySelector(".product-img");
-  const lightbox = document.getElementById("imageLightbox");
-  const lightboxImg = lightbox.querySelector("img");
-
-  // Open lightbox on image click
-  container.addEventListener("click", () => {
-    const mainImg = container.querySelector("img");
-    lightboxImg.src = mainImg.src;
-
-    // Make sure display is reset before showing
-    lightbox.style.display = "flex";
-    // Force reflow to ensure CSS transition re-runs
-    void lightbox.offsetWidth;
-    lightbox.classList.add("show");
-  });
-
-  // Close lightbox when clicking anywhere
-  lightbox.addEventListener("click", () => {
-    lightbox.classList.remove("show");
-
-    // Wait for the fade-out animation to finish before hiding
-    lightbox.addEventListener(
-      "transitionend",
-      () => {
-        if (!lightbox.classList.contains("show")) {
-          lightbox.style.display = "none";
-        }
-      },
-      { once: true }
-    );
-  });
-
-  // Close lightbox when clicking anywhere
-  lightbox.addEventListener("click", () => {
-    lightbox.style.display = "none";
-  });
-
   // AddToCart Increasing or Decreasing Number
   const decreaseBtn = document.getElementById("decrease");
   const increaseBtn = document.getElementById("increase");
@@ -83,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
     //   window.location.href = "cart.html";
     // }, 500);
   });
- 
+
   // Product Details Switching
   const tabLinks = document.querySelectorAll(".tab-link");
   const tabPanes = document.querySelectorAll(".tab-pane");

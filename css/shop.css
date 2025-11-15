@@ -102,7 +102,7 @@ body {
 
 @keyframes toleft {
     0% {
-        right: -10%;
+        right: -30%;
     }
 
     100% {
@@ -362,8 +362,21 @@ body {
 
 .card-img {
     max-width: 387px;
+    cursor: pointer;
+    overflow: hidden;
     border: 1px solid var(--border-color);
+
 }
+
+.card-img>img {
+    transition: 0.3s linear;
+}
+
+.card-img>img:hover {
+    transform: scale(1.1);
+
+}
+
 
 .cardName {
     display: flex;
@@ -444,7 +457,7 @@ body {
 
     @keyframes toleft {
         0% {
-            right: -10%;
+            right: -80%;
         }
 
         100% {

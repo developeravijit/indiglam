@@ -2,30 +2,16 @@
  * luxy.js v0.1.0: Inertia scroll and parallax effect plugin in Vanilla.js
  * (c) 2018 Mineo Okuda
  * MIT License
- * git+ssh://git@github.com:min30327/luxy.js.git
- */
-
-/**
- * Written by Mineo Okuda on 01/03/18.
- *
- * Mineo Okuda - development + design
- * https://willstyle.co.jp
- * https://github.com/min30327
- *
- * MIT license.
  */
 
 (function (root, factory) {
   "use strict";
 
   if (typeof define === "function" && define.amd) {
-    // AMD. Register as an anonymous module.
     define([], factory);
   } else if (typeof exports === "object") {
-    // COMMONJS
     module.exports = factory();
   } else {
-    // BROWSER
     root.luxy = factory();
   }
 })(this, function () {
@@ -48,19 +34,11 @@
   var cancelAnimationFrame =
     window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
-  /**
-   * Merge two or more objects. Returns a new object.
-   * @param {Object}   objects  The objects to merge together
-   * @returns {Object}          Merged values of defaults and options
-   */
   var extend = function () {
-    // Variables
     var extended = {};
-    var deep = false;
     var i = 0;
     var length = arguments.length;
 
-    // Merge the object into the extended object
     var merge = function (obj) {
       for (var prop in obj) {
         if (obj.hasOwnProperty(prop)) {
@@ -69,7 +47,6 @@
       }
     };
 
-    // Loop through each object and conduct a merge
     for (; i < length; i++) {
       var obj = arguments[i];
       merge(obj);
@@ -85,6 +62,7 @@
     this.windowHeight = 0;
     this.wapperOffset = 0;
   };
+
   Luxy.prototype = {
     isAnimate: false,
     isResize: false,
@@ -219,6 +197,49 @@
   };
 
   var luxy = new Luxy();
+
+  /* -----------------------------------------------------
+       ENABLE ONLY ABOVE 768px + AUTO DISABLE ON RESIZE
+  ------------------------------------------------------*/
+
+  function enableLuxy() {
+    luxy.init();
+    window.luxyEnabled = true;
+  }
+
+  function disableLuxy() {
+    document.body.style.height = "auto";
+
+    const wrapper = document.querySelector("#luxy");
+    if (wrapper) {
+      wrapper.style.transform = "none";
+      wrapper.style.position = "relative";
+    }
+
+    document.querySelectorAll(".luxy-el").forEach(el => {
+      el.style.transform = "none";
+    });
+
+    cancelAnimationFrame(luxy.scrollId);
+    cancelAnimationFrame(luxy.resizeId);
+
+    window.luxyEnabled = false;
+  }
+
+  function luxyController() {
+    if (window.innerWidth > 768) {
+      if (!window.luxyEnabled) {
+        enableLuxy();
+      }
+    } else {
+      if (window.luxyEnabled) {
+        disableLuxy();
+      }
+    }
+  }
+
+  luxyController();
+  window.addEventListener("resize", luxyController);
 
   return luxy;
 });

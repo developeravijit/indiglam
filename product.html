@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IndiGlam Product</title>
+    <!-- Product Magnifying CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/css/magnify.css" rel="stylesheet">
     <!-- Swiper CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <!-- Bootstrap Icon CDN -->
@@ -31,7 +33,7 @@
 <body>
 
     <!-- Loading Screen -->
-     <div id="onload-loader">
+    <div id="onload-loader">
         <div class="loader">
             <div class="text"><span>Loading</span></div>
             <div class="text"><span>Loading</span></div>
@@ -135,10 +137,8 @@
                                 <div class="col-xl-6 col-12">
                                     <div class="productImg-box">
                                         <div class="product-img">
-                                            <img src="./assets/product/product-img.png" alt="">
-                                        </div>
-                                        <div class="image-lightbox" id="imageLightbox">
-                                            <img src="./assets/product/product-img.png" alt="Full Product View">
+                                            <img src="./assets/product/product-img.png"
+                                                data-magnify-src="./assets/product/product-img.png" alt="">
                                         </div>
                                         <div class="productImg-list">
                                             <ul class="product-list d-flex">
@@ -540,10 +540,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <!-- Magnify plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.min.js"></script>
+
+    <script>
+        $(function () {
+            $(".product-img img").magnify({
+                speed: 100,
+                magnifiedWidth: 1000,
+                magnifiedHeight: 1000
+            });
+        });
+    </script>
     <!-- Vanilla JS -->
     <script src="./js/script.js"></script>
     <!-- Product Page JS -->
     <script src="./js/product.js"></script>
+
 </body>
 
 </html>

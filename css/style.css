@@ -7,32 +7,27 @@
 /* Larken Demo Font */
 @import url("https://db.onlinewebfonts.com/c/87a0b96df9f33e523f2ebc6a48b02e7a?family=Larken+DEMO");
 
-
 @font-face {
-    font-family: 'Bellina';
+    font-family: "Bellina";
     src: url(../assets/Bellina/Bellina.ttf);
     font-weight: normal;
     font-style: normal;
 }
-
-
-
-
-
 
 :root {
     --playfair-font: "Playfair Display", serif;
     --playball-font: "Playball", cursive;
     --agaleoz-font: "Agaleoz", sans-serif;
     --larken-font: "Larken DEMO", serif;
-    --belina-font: 'Bellina', serif;
+    --belina-font: "Bellina", serif;
     --hdrTop-bg: #c8a77f;
     --active-txt-color: #f2dec5;
     --primary-color: #ffffff;
-    --secondary-color: #FAEAD7;
-    --tertiary-color: #F1DABF;
-    --card-txt-color: #D9CEC1;
-    --border-color: #E5D1B9;
+    --secondary-color: #faead7;
+    --tertiary-color: #f1dabf;
+    --card-txt-color: #d9cec1;
+    --border-color: #e5d1b9;
+    --image-border-color: rgba(229, 209, 185, 0.4);
     --duration: 3s;
     --shine-angle: 90deg;
     --shine-color: rgba(255, 255, 255, 0.4);
@@ -261,8 +256,7 @@ textarea {
 }
 
 .loader .text span {
-    animation:
-        scrolling 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite,
+    animation: scrolling 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite,
         shadow 2s cubic-bezier(0.1, 0.6, 0.9, 0.4) infinite;
 }
 
@@ -404,15 +398,12 @@ textarea {
     }
 }
 
-
 /* Header Section */
 
 .hdr-sec {
     position: absolute;
     width: 100%;
     top: 0;
-
-
 }
 
 .navbar {
@@ -421,13 +412,10 @@ textarea {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: inset #48484861 0px 0px 20px 7px;
-
-
 }
 
 .large-container {
     flex-direction: column;
-
 }
 
 .bottomNavbar-cntn {
@@ -480,7 +468,7 @@ textarea {
 }
 
 .nav-contact>span:first-child {
-    transition: .5s ease;
+    transition: 0.5s ease;
 }
 
 .nav-contact:hover span:first-child {
@@ -490,7 +478,6 @@ textarea {
 /* Nav Links */
 .nav-item {
     margin-right: 64px;
-
 }
 
 .nav-item:last-child {
@@ -508,7 +495,6 @@ textarea {
     &:hover {
         transform: scale(1.1) translateY(3px);
         color: var(--primary-color);
-
     }
 }
 
@@ -552,7 +538,6 @@ textarea {
 /* Right Nav Bar */
 .rightNav-list {
     justify-content: end;
-
 }
 
 .rightNav-item {
@@ -573,13 +558,9 @@ textarea {
     }
 }
 
-
-
 .offcanvas {
     flex-direction: row;
 }
-
-
 
 .navbar-toggler-icon {
     border-radius: 20%;
@@ -633,7 +614,6 @@ textarea {
 }
 
 .bnr-cntn {
-
     text-align: center;
     margin: 117px auto 0;
     max-width: 750px;
@@ -644,18 +624,15 @@ textarea {
     margin: 0 auto;
     font-family: var(--agaleoz-font);
     font-size: clamp(3.5rem, 6.9vw + 1rem, 5.4rem);
-
-
 }
 
 .title-1>span:nth-child(1),
 .title-1>span:nth-child(2) {
-    background: linear-gradient(180deg, #FFFFFF, #F1DABF);
+    background: linear-gradient(180deg, #ffffff, #f1dabf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     white-space: nowrap;
 }
-
 
 .bnr-cntn>p {
     font-size: clamp(0.9rem, 1vw + 0.8rem, 1.6rem);
@@ -663,21 +640,16 @@ textarea {
     margin-top: 10px;
 }
 
-
-
-
 .bnr-img {
-
     max-width: 477px;
     margin: 24px auto 44px;
+    border: 1px solid var(--image-border-color);
 }
 
 .shine-img {
     position: relative;
     overflow: hidden;
-
 }
-
 
 .shine-img::before {
     content: "";
@@ -688,7 +660,6 @@ textarea {
     height: 100%;
     background: var(--shine-background);
     animation: shine var(--duration) ease-in-out infinite;
-
 }
 
 @keyframes shine {
@@ -720,7 +691,6 @@ textarea {
     position: absolute;
     top: 10%;
     z-index: -1;
-
 }
 
 .left-bnrImg::after {
@@ -733,8 +703,6 @@ textarea {
     left: 0;
 }
 
-
-
 .left-bnrCntn {
     max-width: 239px;
     border: 1px solid rgba(241, 218, 191, 0.5);
@@ -744,7 +712,6 @@ textarea {
     padding: 90px 39.5px;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-
 }
 
 .left-bnrCntn>p {
@@ -753,15 +720,12 @@ textarea {
     color: var(--tertiary-color);
 }
 
-
 .leftBtm-img {
     max-width: 195px;
     position: absolute;
     top: 80%;
     left: 10%;
 }
-
-
 
 .leftBtm-circle {
     max-width: 109px;
@@ -780,21 +744,18 @@ textarea {
 .primary-btn {
     font-size: 32px;
     font-family: var(--playfair-font);
-    background: linear-gradient(to right, #8b888818, #DAA87E);
+    background: linear-gradient(to right, #8b888818, #daa87e);
     box-shadow: 5px -2px 20px 0px #daa77e79;
     padding: 23px 61.5px;
     border-radius: 60px;
     transition: 0.3s ease;
-
 }
 
 .primary-btn>span {
-    background: linear-gradient(to right, #F2DEC5, #FFFFFF);
+    background: linear-gradient(to right, #f2dec5, #ffffff);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-
 }
-
 
 .arrow-btn {
     width: 90px;
@@ -802,14 +763,13 @@ textarea {
     border-radius: 50%;
     position: relative;
     background: transparent;
-    color: #DAA87E;
+    color: #daa87e;
     font-size: 22px;
     overflow: hidden;
     padding: 30px 31px;
     transform: rotate(-30deg);
     margin-left: 16px;
     transition-duration: 2s;
-
 }
 
 .arrow-btn::before {
@@ -818,10 +778,8 @@ textarea {
     inset: 0;
     padding: 1px;
     border-radius: 50%;
-    background: linear-gradient(to right, #F1DABF, #8B7964);
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    background: linear-gradient(to right, #f1dabf, #8b7964);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
 }
@@ -839,9 +797,6 @@ textarea {
 .bnr-btn:hover .arrow-btn {
     transform: rotate(360deg);
 }
-
-
-
 
 .right-bnrImg {
     max-width: 239px;
@@ -868,7 +823,6 @@ textarea {
     right: 4%;
 }
 
-
 .right-Bnrcntn {
     max-width: 294px;
     position: absolute;
@@ -882,7 +836,6 @@ textarea {
 .right-Bnrcntn>p {
     font-size: clamp(1rem, 1.87vw, 2.31rem);
     color: var(--tertiary-color);
-
 }
 
 .bnrCard {
@@ -894,7 +847,7 @@ textarea {
     perspective: 1000px;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: grab;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
 }
 
 .bnrCard:hover {
@@ -916,13 +869,11 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
 
 .bnrCard:hover .bnrCard-cntn {
     transform: translateY(0);
 }
-
 
 .cardImg-1 {
     background: url(../assets/index/card-1.png) no-repeat center/cover;
@@ -936,9 +887,8 @@ textarea {
     background: url(../assets/index/card-3.png) no-repeat center/cover;
 }
 
-
 .title-2 {
-    background: linear-gradient(330deg, #F6F5F5, #F5E4D2);
+    background: linear-gradient(330deg, #f6f5f5, #f5e4d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: clamp(2rem, 1.5vw + 1rem, 3.08rem);
@@ -947,14 +897,12 @@ textarea {
 .bnrCard-cntn>p {
     font-size: clamp(1rem, 1vw + 1rem, 1.85rem);
     color: var(--card-txt-color);
-
 }
 
 .bottom-bnrCntn {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
 
 .secondary-btn {
@@ -974,10 +922,8 @@ textarea {
     inset: 0;
     padding: 2px;
     border-radius: 60px;
-    background: linear-gradient(180deg, #A3A3A3, #FFFEFE);
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
+    background: linear-gradient(180deg, #a3a3a3, #fffefe);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
 }
@@ -992,22 +938,20 @@ textarea {
     background: linear-gradient(to right, #e9917b, #010101);
     border-radius: 60px;
     opacity: 0;
-    transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .secondary-btn>span:first-child {
     text-transform: capitalize;
-    background: linear-gradient(to right, #c2baba, #F5E4D2);
+    background: linear-gradient(to right, #c2baba, #f5e4d2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: relative;
     z-index: 1;
 }
 
-
-
 .arrow-btn2 {
-    background: linear-gradient(30deg, #E3C1AC, #D7A170);
+    background: linear-gradient(30deg, #e3c1ac, #d7a170);
     margin-left: 0;
 }
 
@@ -1053,7 +997,7 @@ textarea {
 
 /* Jewellery Collection Section */
 .jwl-sec {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     background: black;
     margin: 19px 0;
     padding: 71px 0 141px;
@@ -1073,8 +1017,6 @@ textarea {
     justify-content: end;
 }
 
-
-
 .tertiary-btn {
     font-family: var(--playfair-font);
     font-size: 36px;
@@ -1084,7 +1026,6 @@ textarea {
     margin-right: 20px;
     position: relative;
 }
-
 
 .tertiary-btn::before {
     content: "";
@@ -1098,7 +1039,6 @@ textarea {
     background: var(--active-txt-color);
     transition: transform 0.25s ease-out;
 }
-
 
 .button-box {
     display: inline-flex;
@@ -1116,19 +1056,22 @@ textarea {
 
 .swiper1 {
     margin-top: 75px;
+    mask-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 0%,
+            rgb(0, 0, 0) 12.5%,
+            rgb(0, 0, 0) 87.5%,
+            rgba(0, 0, 0, 0) 100%);
 }
 
 .swiper1-cntn {
     max-width: 421px;
     min-height: 533px;
     display: flex;
-    border: 1px solid var(--active-txt-color);
+    border: 1px solid var(--image-border-color);
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
 }
-
-
 
 .frame-1 {
     background: url(../assets/index/1st-frame.png) no-repeat center/cover;
@@ -1152,7 +1095,6 @@ textarea {
     text-align: end;
     cursor: pointer;
 }
-
 
 .topCard-cntn>span {
     font-size: 29px;
@@ -1181,8 +1123,7 @@ textarea {
 .product-link {
     font-size: 24px;
     font-weight: 500;
-    color: #FDE9D7;
-
+    color: #fde9d7;
 }
 
 .bottomSwiper-left>p:last-child {
@@ -1192,7 +1133,6 @@ textarea {
     display: flex;
     align-items: center;
 }
-
 
 .bottomSwiper-left>p:last-child>span:first-child {
     margin-right: 5px;
@@ -1218,12 +1158,10 @@ textarea {
     transition: 0.3s ease;
 }
 
-
 .bottomSwiper-right>span:first-child {
     width: 2px;
     height: 16px;
 }
-
 
 .bottomSwiper-right>span:last-child {
     width: 16px;
@@ -1234,17 +1172,15 @@ textarea {
     opacity: 0;
 }
 
-
 /* Personalized Section */
 .personalized-sec {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     background: black;
     padding: 50px 0;
 }
 
 .full-cntn {
     padding: 60px 32px;
-
 }
 
 .personalizedLeft-cntn {
@@ -1257,7 +1193,6 @@ textarea {
 .personalizedTop-cntn {
     max-width: 413px;
     border-bottom: 1px solid rgba(229, 209, 185, 0.3);
-
 }
 
 .title-4 {
@@ -1274,15 +1209,11 @@ textarea {
     border-bottom: 1px solid rgba(229, 209, 185, 0.3);
 }
 
-
 .personalizedBottom-cntn>h2.title-4 {
     font-weight: 600;
     font-size: clamp(2rem, 1.5vw + 1rem, 3.698rem);
     font-style: italic;
-
-
 }
-
 
 .personalizedBottom-cntn>p {
     font-family: var(--playball-font);
@@ -1292,9 +1223,8 @@ textarea {
 
 .personalizedImg-1 {
     max-width: 514px;
+    border: 1px solid var(--image-border-color);
 }
-
-
 
 .personalizedRight-cntn>h2.title-2 {
     max-width: 259px;
@@ -1303,7 +1233,7 @@ textarea {
 
 .personalizedRight-cntn>p {
     font-size: clamp(1rem, 1vw + 1rem, 1.85rem);
-    color: #F8E6D0;
+    color: #f8e6d0;
     margin-top: 42px;
 }
 
@@ -1329,6 +1259,7 @@ textarea {
 .personalizedImg-2 {
     max-width: 514px;
     margin-left: auto;
+    border: 1px solid var(--image-border-color);
 }
 
 .leftButton {
@@ -1338,12 +1269,12 @@ textarea {
 .leftButton>.button-box>.tertiary-btn {
     font-size: clamp(1.4rem, 1.2vw + 1rem, 1.846rem);
     margin-right: 15px;
-    color: #DBB28F;
+    color: #dbb28f;
 }
 
 .rotate-arrow {
     font-size: clamp(1.1rem, 1.1vw + 1rem, 1.5rem);
-    color: #DBB28F;
+    color: #dbb28f;
     transform: rotate(-30deg);
     transition: 1.5s ease;
 }
@@ -1356,17 +1287,15 @@ textarea {
 .collection-sec {
     padding: 46px 0;
     background: black;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     margin: 19px 0;
 }
-
 
 .collection-title>.title-3 {
     color: var(--active-txt-color);
     font-weight: normal;
     font-family: var(--larken-font);
 }
-
 
 .collection-btn {
     font-family: var(--larken-font);
@@ -1380,7 +1309,7 @@ textarea {
 
 .swiper2-img {
     max-width: 400px;
-    border: 1px solid rgba(229, 209, 185, 0.5);
+    border: 1px solid var(--image-border-color);
 }
 
 .swiper2-cntn {
@@ -1404,11 +1333,9 @@ textarea {
 .festive-sec {
     padding: 46px 0;
     background: black;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     font-family: var(--larken-font);
 }
-
-
 
 .swiper3 {
     margin-top: 100px;
@@ -1418,7 +1345,7 @@ textarea {
 .asthetic-sec {
     background: black;
     padding: 30px 0 24px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     margin: 19px 0;
 }
 
@@ -1428,9 +1355,7 @@ textarea {
 
 .asthetic-cntn>.title-3 {
     font-family: var(--larken-font);
-
 }
-
 
 .asthetic-cntn>p {
     font-size: clamp(1.4rem, 2vw, 2rem);
@@ -1445,16 +1370,13 @@ textarea {
 .asthetic-btn {
     border-radius: 0;
     margin-top: 35px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
 }
 
 .asthetic-btn::after,
 .asthetic-btn>span:last-child {
     border-radius: 0;
-
 }
-
-
 
 .astheticImg-box {
     max-width: 926px;
@@ -1464,9 +1386,8 @@ textarea {
 .asthetic-img {
     max-width: 764px;
     margin: 0 auto;
+    border: 1px solid var(--image-border-color);
 }
-
-
 
 .circle-top {
     max-width: 200px;
@@ -1476,7 +1397,6 @@ textarea {
     position: absolute;
     top: -5%;
     right: 0;
-
 }
 
 .circle-bottom {
@@ -1489,25 +1409,22 @@ textarea {
     left: 0;
 }
 
-
 /* Party Collection Section */
 
 .party-sec {
     padding: 46px 0;
-    border: 1px solid var(--border-color);
-
+    border: 1px solid var(--image-border-color);
 }
 
 .swiper4 {
     margin-top: 100px;
 }
 
-
 /* About Section */
 
 .abt-sec {
     padding: 54px 0;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     margin: 19px 0;
     background: url(../assets/index/abtBG.png) no-repeat center/cover;
 }
@@ -1515,7 +1432,6 @@ textarea {
 .abt-wrpr {
     padding: 30px 36px 0;
 }
-
 
 .abtTitle-box {
     max-width: 658px;
@@ -1547,7 +1463,7 @@ textarea {
 
 .swiper5-cntn {
     padding: 87px 39px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     border-radius: 10px;
     max-width: 528px;
     margin: 0 auto;
@@ -1555,18 +1471,19 @@ textarea {
 }
 
 .swiper5-bg1 {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(162, 121, 72, 0.3));
-
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.3),
+            rgba(162, 121, 72, 0.3));
 }
 
 .swiper5-bg2 {
     background: rgba(23, 16, 6, 0.5);
-
 }
 
 .swiper5-bg3 {
-    background: linear-gradient(225deg, rgba(181, 100, 2, 0.3), rgba(0, 0, 0, 0.3));
-
+    background: linear-gradient(225deg,
+            rgba(181, 100, 2, 0.3),
+            rgba(0, 0, 0, 0.3));
 }
 
 .swiper5-img {
@@ -1580,7 +1497,7 @@ textarea {
 .title-5 {
     font-size: clamp(1rem, 2.3vw, 2.308rem);
     white-space: nowrap;
-    color: #F8DAB7;
+    color: #f8dab7;
 }
 
 .stars {
@@ -1620,9 +1537,8 @@ textarea {
 .follow-sec {
     background: url(../assets/index/follow-bg.png) no-repeat center/cover;
     padding: 65px 0;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
 }
-
 
 .title-6 {
     font-family: var(--larken-font);
@@ -1637,7 +1553,6 @@ textarea {
 
 .swiper6-cntn {
     text-align: center;
-
 }
 
 .swiper6-img {
@@ -1651,14 +1566,12 @@ textarea {
     opacity: 0.4;
 }
 
-
 .swiper6 .swiper-slide-active {
     filter: blur(0) brightness(1);
     transform: scale(1);
     opacity: 1;
     z-index: 3;
 }
-
 
 .swiper6 .swiper-slide-next,
 .swiper6 .swiper-slide-prev {
@@ -1668,12 +1581,10 @@ textarea {
     z-index: 2;
 }
 
-
-
 /* Footer Section */
 .ftr-sec {
     padding: 70px 0;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     margin-top: 19px;
     background: url(../assets/index/footer-bg.png) no-repeat center/cover;
     background-blend-mode: lighten;
@@ -1689,7 +1600,7 @@ textarea {
 
 .ftr-hdrTitle {
     font-family: var(--larken-font);
-    color: #F5E7D5;
+    color: #f5e7d5;
 }
 
 .ftr-hdrTitle>p:nth-child(1) {
@@ -1732,7 +1643,6 @@ textarea {
     top: -35px;
 }
 
-
 .ftrSocial-item:last-child {
     margin-right: 0;
 }
@@ -1740,7 +1650,7 @@ textarea {
 .ftrSocial-link {
     font-size: 24px;
     color: var(--border-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     width: 47px;
     height: 47px;
     display: flex;
@@ -1756,7 +1666,6 @@ textarea {
         box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
     }
 }
-
 
 .fill-color {
     position: absolute;
@@ -1794,13 +1703,34 @@ textarea {
     font-weight: 100;
     color: var(--border-color);
     transition: 0.3s ease;
+    position: relative;
 
     &:hover {
-        transform: scale(.9);
-        box-shadow: 0px 0px 20px 5px rgba(229, 209, 185, 0.4);
-
+        color: var(--primary-color);
+        transform: scale(1.05);
     }
+
 }
+
+.ftrNav-link::after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--active-txt-color);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.ftrNav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 
 .ftrItem-2 {
     display: flex;
@@ -1810,9 +1740,12 @@ textarea {
 
 .ftrItem-2:hover .call {
     transform: rotate(45deg);
+
 }
 
-
+.ftrItem-2:hover span {
+    color: var(--primary-color);
+}
 
 .ftrItem-2>span {
     font-size: 16px;
@@ -1825,6 +1758,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s linear;
 
 }
 
@@ -1837,10 +1771,6 @@ textarea {
     transition: 0.3s ease;
 }
 
-.ftrLink-2:hover span:last-child {
-    transform: scale(.9);
-    box-shadow: 0px 0px 20px 5px rgba(229, 209, 185, 0.4);
-}
 
 .ftrLink-2 {
     display: flex;
@@ -1851,9 +1781,7 @@ textarea {
     font-size: 17px;
 }
 
-.ftrNav-link>span:last-child {
-    color: rgba(229, 209, 185, 0.6);
-}
+
 
 .ftr-form {
     max-width: 382px;
@@ -1875,7 +1803,6 @@ textarea {
     background: transparent;
     border-bottom: 1px solid rgba(229, 209, 185, 0.7);
     padding-right: 90px;
-
 }
 
 .ftr-submitBtn {
@@ -1894,7 +1821,7 @@ textarea {
     transition: 0.3s linear;
 
     &:hover {
-        transform: scale(.9) translateY(-50%);
+        transform: scale(0.9) translateY(-50%);
         box-shadow: 0px 0px 20px 5px rgba(229, 209, 185, 0.4);
     }
 }
@@ -1914,10 +1841,8 @@ textarea {
     color: rgba(229, 209, 185, 0.6);
 }
 
-
 /* Responsive Section */
-@media screen and (max-width:1448px) {
-
+@media screen and (max-width: 1448px) {
     /* Banner Section */
 
     .secondary-btn {
@@ -1925,7 +1850,7 @@ textarea {
     }
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width: 1400px) {
 
     /* Asthetic Section */
     .asthetic-img {
@@ -1933,7 +1858,7 @@ textarea {
     }
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
 
     /* Banner Section */
     .left-bnrImg::after {
@@ -1977,8 +1902,6 @@ textarea {
     .personalizedBottom-cntn {
         margin: 30px 0 50px;
     }
-
-
 
     .personalizedImg-1 {
         margin: 0 auto 50px;
@@ -2025,7 +1948,6 @@ textarea {
         border-bottom-left-radius: 20px;
         max-width: 310px;
         min-height: 100vh;
-
     }
 
     .offcanvas-header {
@@ -2040,7 +1962,6 @@ textarea {
 
     .rightNav-list {
         justify-content: center;
-
     }
 
     /* Banner Section */
@@ -2092,7 +2013,6 @@ textarea {
         top: 60%;
         right: 0;
         max-width: 187px;
-
     }
 
     .primary-btn {
@@ -2138,11 +2058,9 @@ textarea {
     .asthetic-img {
         max-width: 578px;
     }
-
 }
 
-@media screen and (max-width:768px) {
-
+@media screen and (max-width: 768px) {
 
     /* Banner Section */
     .title-1 {
@@ -2169,7 +2087,6 @@ textarea {
     .swiper4 {
         margin-top: 30px;
     }
-
 
     /* Asthetic Section */
     .asthetic-img {
@@ -2202,13 +2119,9 @@ textarea {
         display: none !important;
     }
 
-
     .navbar-toggler {
-
         align-self: flex-end;
     }
-
-
 
     /* Banner Section */
     .bnr-sec {
@@ -2252,8 +2165,6 @@ textarea {
         padding: 20px 10px;
     }
 
-
-
     /* Asthetic Section */
     .asthetic-img {
         max-width: 270px;
@@ -2290,12 +2201,9 @@ textarea {
         justify-content: center;
         text-align: start;
     }
-
-
-
 }
 
-@media screen and (max-width:442px) {
+@media screen and (max-width: 442px) {
 
     /* Asthetic Section */
     .circle-top {

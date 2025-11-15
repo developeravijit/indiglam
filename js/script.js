@@ -15,6 +15,7 @@ window.onload = function () {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  
   // Animated Text Dynamic
   function typeEffect(element, speed) {
     let text = element.textContent.trim();
@@ -495,6 +496,18 @@ document.addEventListener("DOMContentLoaded", () => {
     toCartBtn.addEventListener("click", () => {
       toCartBtn.textContent = "Go to Cart";
       toCartBtn.disabled = true;
+    });
+  });
+
+  // Link to image tag
+
+  const linkImg = document.querySelectorAll(".card-img");
+
+  linkImg.forEach((imgBtn) => {
+    imgBtn.addEventListener("click", () => {
+      setTimeout(() => {
+        window.location.href = "product.html";
+      }, 500);
     });
   });
 });

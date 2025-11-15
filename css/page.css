@@ -11,6 +11,7 @@
     --tertiary-color: #F1DABF;
     --card-txt-color: #D9CEC1;
     --border-color: #E5D1B9;
+    --image-border-color: rgba(229, 209, 185, 0.4);
     --duration: 3s;
     --shine-angle: 90deg;
     --shine-color: rgba(255, 255, 255, 0.4);
@@ -80,7 +81,7 @@ body {
 .swiper7-cntn {
     max-width: 513px;
     height: 600px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     margin: 0 auto;
 }
 
@@ -157,7 +158,7 @@ body {
 
 @keyframes slideRight {
     0% {
-        right: -10%;
+        right: -40%;
     }
 
     100% {
@@ -187,7 +188,7 @@ body {
 
 .cel-img {
     max-width: 769px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     position: relative;
     border-top-left-radius: 382px;
     border-top-right-radius: 382px;
@@ -198,8 +199,8 @@ body {
     position: absolute;
     width: 170px;
     height: 170px;
-    border-top: 1px solid var(--border-color);
-    border-left: 1px solid var(--border-color);
+    border-top: 1px solid var(--image-border-color);
+    border-left: 1px solid var(--image-border-color);
     border-top-left-radius: 85%;
     bottom: -2px;
     right: -2px;
@@ -221,7 +222,7 @@ body {
     position: absolute;
     bottom: -8%;
     right: -10%;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     z-index: 2;
 
 }
@@ -283,7 +284,7 @@ body {
 }
 
 .detail-box {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
     padding: 27px 22px;
     max-width: 447px;
     width: 100%;
@@ -320,7 +321,7 @@ body {
 
 .luxury-img {
     max-width: 794px;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--image-border-color);
 
 }
 
@@ -532,7 +533,7 @@ body {
 
     @keyframes slideRight {
         0% {
-            right: -10%;
+            right: -80%;
         }
 
         100% {
