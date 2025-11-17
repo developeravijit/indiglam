@@ -329,9 +329,33 @@
 
 .signUp-btn {
     letter-spacing: 0.02em;
-    text-decoration: underline;
     background: transparent;
     color: var(--border-color);
+    transition: 0.3s ease;
+
+    &:hover {
+        color: var(--primary-color);
+        transform: scale(1.05);
+    }
+}
+
+.signUp-btn::after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: var(--active-txt-color);
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+.signUp-btn:hover::after {
+    width: 100%;
+    left: 0;
 }
 
 @media screen and (max-width: 768px) {
